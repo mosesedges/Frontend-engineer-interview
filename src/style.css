@@ -55,8 +55,19 @@ h1 {
   filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
+.card-carousel {
+  padding: 12px;
+  background-color: darkorange;
+  margin: 12px;
+  width:600px;
+  height:auto;
+}
 .card {
-  padding: 2em;
+  padding: 12px;
+  background-color: darkorange;
+  margin: 12px;
+  width:600px;
+  height:auto;
 }
 
 .read-the-docs {
@@ -73,6 +84,8 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  width:80px;
+  height:80px ;
 }
 button:hover {
   border-color: #646cff;
@@ -93,4 +106,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+#carousel{
+  display:flex;
+  flex-direction: row;
+  width: 650px;
 }

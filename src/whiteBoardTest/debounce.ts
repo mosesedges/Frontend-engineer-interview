@@ -2,7 +2,7 @@
 
 const debounce = (mainFn: () => void, delay: number | undefined) => {
   let timer: number;
-  return function (...args) {
+  return function (...args: any) {
     clearInterval(timer);
     timer = setInterval(() => {
       mainFn(...args);
@@ -17,4 +17,4 @@ function search() {
 }
 
 const debounceSearch = debounce(search, 5000);
-console.log(debounceSearch);
+console.log(debounceSearch());

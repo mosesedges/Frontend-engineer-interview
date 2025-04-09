@@ -6,7 +6,13 @@ import removeDuplicates from "./whiteBoardTest/removeDublicates.ts";
 import reverse from "./whiteBoardTest/reverse.ts";
 import flatten from "./whiteBoardTest/flattenArrays.ts";
 
-document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+const body = document.querySelector("body");
+
+const card = body?.querySelector(".card-carousel");
+
+document.querySelector<HTMLDivElement>("#app")!.innerHTML =
+  card?.textContent ??
+  `
   <div>
     <a href="https://vite.dev" target="_blank">
       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -23,6 +29,9 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
     </p>
   </div>
 `;
+
+//document.querySelector("#app")!.innerHTML = `<h1> This is a carousel </h1>`;
+
 removeDuplicates("This is is a test test case");
 reverse("Hello world");
 flatten([1, 2, [3, 4, [5, 6, 7], 8], 9, 10] as number[]);
