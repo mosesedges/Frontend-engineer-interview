@@ -36,4 +36,14 @@ removeDuplicates("This is is a test test case");
 reverse("Hello world");
 flatten([1, 2, [3, 4, [5, 6, 7], 8], 9, 10] as number[]);
 
-setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+//setupCounter(document.querySelector<HTMLButtonElement>("#counter")!);
+
+const cardRequest = {
+  URL: "https://jsonplaceholder.typicode.com/todos/3",
+  request: async () => {
+    const response = await fetch(cardRequest.URL);
+    return await response.json();
+  },
+};
+
+console.log(await cardRequest.request());
